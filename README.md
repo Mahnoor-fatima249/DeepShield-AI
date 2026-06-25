@@ -8,23 +8,23 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
 </p>
 
-DeepShield AI ek advanced cyber security aur cyber intelligence infrastructure hai jo artificial intelligence ke zariye real-time deepfake analysis, face detection, aur security integrity verification karti hai. Iska backend high-performance **FastAPI** par chal raha hai aur frontend sleek dark-themed responsive UI par mabni hai.
+DeepShield AI is an advanced cyber security and cyber intelligence infrastructure designed to leverage artificial intelligence for real-time deepfake analysis, face detection, and security integrity verification. The platform features a high-performance **FastAPI** backend coupled with a sleek, dark-themed, and responsive user interface on the frontend.
 
 ---
 
 ## 🚀 Key Features
 
-- 🖥️ **Cyber Intelligence Dashboard:** Total scans, detected deepfakes, threat accuracy analytics ka mukammal graph view.
-- 🔍 **Multi-Layer AI Detection:** Face analysis, GAN detection, aur metadata verification models.
-- ⚡ **Asynchronous Live Scanning:** Fast execution aur high-speed analysis server pipeline.
-- 📊 **Detailed AI Reports:** Scan results ko dynamic accuracy scores aur downloadable PDF formats mein generate karna.
-- ⚙️ **Platform Preferences:** Secure account actions, history management, aur dynamic system stats tracking.
+- 🖥️ **Cyber Intelligence Dashboard:** Comprehensive graphical visualization tracking total scans, detected deepfakes, and threat accuracy metrics.
+- 🔍 **Multi-Layer AI Detection:** Robust evaluation pipeline integrating Face Analysis, GAN Detection, and Metadata Verification models.
+- ⚡ **Asynchronous Live Scanning:** Fast processing execution optimized via a high-speed analysis server pipeline.
+- 📊 **Detailed AI Reports:** Generates real-time analysis reports displaying dynamic accuracy scores along with downloadable PDF export options.
+- ⚙️ **Platform Preferences:** Secure profile management, historical scan data tracking, and dynamic system statistics monitoring.
 
 ---
 
 ## 📈 System Architecture & Data Flow
 
-Niche diya gaya flow diagram system ke working mechanism ko darshata hai:
+The flow diagram below illustrates the technical operational mechanism of the platform:
 
 
 ```
@@ -75,7 +75,7 @@ deepfake_detection_system/
 
 ## 🛠️ Installation & Local Setup
 
-### 1. Repository Clone Karein:
+### 1. Clone the Repository:
 
 ```bash
 git clone [https://github.com/YOUR_USERNAME/deepfake-detection-platform.git](https://github.com/YOUR_USERNAME/deepfake-detection-platform.git)
@@ -83,7 +83,7 @@ cd deepfake-detection-platform
 
 ```
 
-### 2. Virtual Environment Setup Karein:
+### 2. Set Up a Virtual Environment:
 
 ```bash
 python -m venv venv
@@ -94,25 +94,22 @@ source venv/bin/activate
 
 ```
 
-### 3. Dependencies Install Karein:
+### 3. Install Dependencies:
 
 ```bash
 pip install -r requirements.txt
 
 ```
 
-### 4. Local FastAPI Server Run Karein:
+### 4. Run the Local FastAPI Server:
 
 ```bash
 $env:PYTHONPATH="." ; uvicorn app.main:app --reload
 
 ```
 
-Server direct active ho jayega: `http://127.0.0.1:8000`
+The server will initialize immediately at: `http://127.0.0.1:8000`
 
-Interactive API Swagger Docs check karein: `http://127.0.0.1:8000/docs`
+Access interactive API Swagger documentation at: `http://127.0.0.1:8000/docs`
 
-
-```
-
-Is se jab koi aapka GitHub open karega, toh use text ke sath aapke banaye huye aala dashboard ka visual graph preview bhi saamne nazar aayega!
+---
