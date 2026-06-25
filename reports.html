@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield AI | Reports</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>DeepShield AI</span>
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="new-scan.html">
+                        <i class="fa-solid fa-upload"></i>
+                        New Scan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>AI Reports</h1>
+
+                    <p>
+                        Download and review deepfake analysis reports
+                    </p>
+
+                </div>
+
+            </div>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <h3>1,240</h3>
+
+                    <p>Total Reports</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-shield"></i>
+
+                    <h3>892</h3>
+
+                    <p>Verified Safe</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <h3>218</h3>
+
+                    <p>Fake Detected</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <h3>320</h3>
+
+                    <p>Downloads</p>
+
+                </div>
+
+            </section>
+
+            <div class="reports-table">
+
+                <h2>Generated Reports</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Report ID</th>
+                            <th>File Name</th>
+                            <th>Result</th>
+                            <th>Confidence</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>#DS-1001</td>
+                            <td>video_scan_01.mp4</td>
+                            <td class="danger" style="color: #ff4d6d; font-weight: bold;">Fake</td>
+                            <td>91%</td>
+
+                            <td>
+                                <button class="scan-btn" onclick="alert('Downloading PDF Report #DS-1001...')">
+                                    Download PDF
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>#DS-1002</td>
+                            <td>image_test_22.jpg</td>
+                            <td class="safe" style="color: #4ade80; font-weight: bold;">Authentic</td>
+                            <td>96%</td>
+
+                            <td>
+                                <button class="scan-btn" onclick="alert('Downloading PDF Report #DS-1002...')">
+                                    Download PDF
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>#DS-1003</td>
+                            <td>media_clip_09.mp4</td>
+                            <td class="warning" style="color: #fbbf24; font-weight: bold;">Suspicious</td>
+                            <td>72%</td>
+
+                            <td>
+                                <button class="scan-btn" onclick="alert('Downloading PDF Report #DS-1003...')">
+                                    Download PDF
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>#DS-1004</td>
+                            <td>deepfake_sample.png</td>
+                            <td class="danger" style="color: #ff4d6d; font-weight: bold;">Fake</td>
+                            <td>88%</td>
+
+                            <td>
+                                <button class="scan-btn" onclick="alert('Downloading PDF Report #DS-1004...')">
+                                    Download PDF
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="content-grid" style="margin-top:25px;">
+
+                <div class="activity-card">
+
+                    <h2>Report Insights</h2>
+
+                    <div class="activity-item">
+                        AI Model Version
+                        <span>DeepShield v2.1</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Analysis Type
+                        <span>Multi-Layer Detection</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Processing Time
+                        <span>2.4 sec</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Accuracy Level
+                        <span>98.7%</span>
+                    </div>
+
+                </div>
+
+                <div class="activity-card">
+
+                    <h2>Export Options</h2>
+
+                    <div class="activity-item">
+                        PDF Report
+                        <button class="scan-btn" onclick="alert('Exporting full log as PDF...')">Export</button>
+                    </div>
+
+                    <div class="activity-item">
+                        CSV Data
+                        <button class="notification-btn" onclick="alert('Exporting summary as CSV...')">Export</button>
+                    </div>
+
+                    <div class="activity-item">
+                        JSON Output
+                        <button class="notification-btn" onclick="alert('Generating raw JSON structure...')">Export</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

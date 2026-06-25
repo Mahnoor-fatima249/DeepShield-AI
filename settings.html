@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield AI | Settings</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>DeepShield AI</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="new-scan.html">
+                        <i class="fa-solid fa-upload"></i>
+                        New Scan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your account and platform preferences
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <div class="activity-card">
+
+                    <h2>Profile Settings</h2>
+
+                    <div class="activity-item">
+                        Username
+                        <input type="text" value="DeepUser" style="
+                            padding:8px;
+                            border-radius:8px;
+                            border:none;
+                            background:#0f1c33;
+                            color:white;
+                        ">
+                    </div>
+
+                    <div class="activity-item">
+                        Email
+                        <input type="email" value="user@deepshield.ai" style="
+                            padding:8px;
+                            border-radius:8px;
+                            border:none;
+                            background:#0f1c33;
+                            color:white;
+                        ">
+                    </div>
+
+                    <div class="activity-item">
+                        Password
+                        <button class="scan-btn" onclick="alert('Redirecting to secure password reset portal...')">Change</button>
+                    </div>
+
+                </div>
+
+                <div class="activity-card">
+
+                    <h2>Security</h2>
+
+                    <div class="activity-item">
+                        Two-Factor Auth
+                        <span>Enabled</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Login Alerts
+                        <span>Active</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Device Management
+                        <button class="notification-btn" onclick="alert('Current Active Sessions:\n1. Windows PC - Lahore, PK (Active)\n2. Android - Rawalpindi, PK')">View</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="content-grid" style="margin-top:20px;">
+
+                <div class="activity-card">
+
+                    <h2>Platform Preferences</h2>
+
+                    <div class="activity-item">
+                        Theme Mode
+                        <select style="
+                            padding:8px;
+                            border-radius:8px;
+                            border:none;
+                            background:#0f1c33;
+                            color:white;
+                        ">
+                            <option>Dark Mode</option>
+                            <option>Light Mode</option>
+                        </select>
+                    </div>
+
+                    <div class="activity-item">
+                        Notifications
+                        <input type="checkbox" checked>
+                    </div>
+
+                    <div class="activity-item">
+                        Auto Scan History Save
+                        <input type="checkbox" checked>
+                    </div>
+
+                </div>
+
+                <div class="activity-card">
+
+                    <h2>Account Actions</h2>
+
+                    <div class="activity-item">
+                        Export Data
+                        <button class="scan-btn" onclick="alert('Preparing account backup archive...')">Export</button>
+                    </div>
+
+                    <div class="activity-item">
+                        Clear History
+                        <button class="notification-btn" onclick="confirm('Are you sure you want to wipe all scan logs?') ? alert('Logs cleared successfully.') : null;">Clear</button>
+                    </div>
+
+                    <div class="activity-item">
+                        Delete Account
+                        <button style="
+                            padding:10px 15px;
+                            border:none;
+                            border-radius:10px;
+                            background:#ff4d6d;
+                            color:white;
+                            cursor:pointer;
+                        " onclick="alert('For security reasons, contact the administrator to delete cyber intelligence accounts.')">
+                            Delete
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="margin-top:25px;">
+
+                <button class="scan-btn" onclick="alert('Preferences and adjustments updated successfully!')">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

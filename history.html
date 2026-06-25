@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield AI | Scan History</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>DeepShield AI</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="new-scan.html">
+                        <i class="fa-solid fa-upload"></i>
+                        New Scan
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>Scan History</h1>
+
+                    <p>
+                        View all previous AI detection scans
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="chart-card" style="margin-bottom:20px;">
+
+                <div style="
+                    display:flex;
+                    gap:15px;
+                    flex-wrap:wrap;
+                ">
+
+                    <input type="text"
+                        placeholder="Search file name..."
+                        style="
+                        flex:1;
+                        padding:12px;
+                        border-radius:10px;
+                        border:none;
+                        background:#0f1c33;
+                        color:white;
+                        outline:none;
+                        ">
+
+                    <select style="
+                        padding:12px;
+                        border-radius:10px;
+                        background:#0f1c33;
+                        color:white;
+                        border:none;
+                    ">
+
+                        <option>All Results</option>
+                        <option>Fake</option>
+                        <option>Authentic</option>
+                        <option>Suspicious</option>
+
+                    </select>
+
+                    <button class="scan-btn">
+                        Filter
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="reports-table">
+
+                <h2>Recent Scans</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>File Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Score</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>face_video_01.mp4</td>
+                            <td>Video</td>
+                            <td class="danger">Fake</td>
+                            <td>91%</td>
+
+                            <td>
+                                <button class="notification-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>profile_img_22.jpg</td>
+                            <td>Image</td>
+                            <td class="safe">Authentic</td>
+                            <td>96%</td>
+
+                            <td>
+                                <button class="notification-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>news_clip.mp4</td>
+                            <td>Video</td>
+                            <td class="warning">Suspicious</td>
+                            <td>68%</td>
+
+                            <td>
+                                <button class="notification-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>deepfake_test.png</td>
+                            <td>Image</td>
+                            <td class="danger">Fake</td>
+                            <td>88%</td>
+
+                            <td>
+                                <button class="notification-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div style="
+                margin-top:20px;
+                display:flex;
+                justify-content:center;
+                gap:10px;
+            ">
+
+                <button class="notification-btn">Prev</button>
+                <button class="scan-btn">1</button>
+                <button class="notification-btn">2</button>
+                <button class="notification-btn">Next</button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+/* Floating Effect */
+
+@keyframes float {
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Glow Effect */
+
+@keyframes glow {
+
+    0%{
+        box-shadow:0 0 10px #00e5ff;
+    }
+
+    50%{
+        box-shadow:0 0 30px #00e5ff;
+    }
+
+    100%{
+        box-shadow:0 0 10px #00e5ff;
+    }
+
+}
+
+/* Radar Rotate */
+
+@keyframes radar {
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}

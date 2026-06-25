@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield AI | New Scan</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>DeepShield AI</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="new-scan.html">
+                        <i class="fa-solid fa-upload"></i>
+                        New Scan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>New Deepfake Scan</h1>
+
+                    <p>
+                        Upload media and run AI analysis
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="upload-card">
+
+                <h2>Upload Media</h2>
+
+                <div class="upload-zone" id="dropZone">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h3>
+                        Drag & Drop Files
+                    </h3>
+
+                    <p>
+                        Upload JPG, PNG, MP4, MOV
+                    </p>
+
+                    <button id="chooseBtn">
+                        Choose File
+                    </button>
+
+                    <input type="file" id="fileInput" hidden>
+
+                </div>
+
+            </div>
+
+            <div class="chart-card" style="margin-top:20px;">
+
+                <h2>Media Preview</h2>
+
+                <div id="previewContainer" style="
+                    min-height:300px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    color:#9ca3af;
+                    ">
+
+                    No file selected
+
+                </div>
+
+            </div>
+
+            <div class="content-grid" style="margin-top:20px;">
+
+                <div class="activity-card">
+
+                    <h2>AI Detection Models</h2>
+
+                    <div class="activity-item">
+                        Face Analysis
+                        <input type="checkbox" checked>
+                    </div>
+
+                    <div class="activity-item">
+                        GAN Detection
+                        <input type="checkbox" checked>
+                    </div>
+
+                    <div class="activity-item">
+                        Metadata Verification
+                        <input type="checkbox" checked>
+                    </div>
+
+                    <div class="activity-item">
+                        Noise Pattern Scan
+                        <input type="checkbox">
+                    </div>
+
+                </div>
+
+                <div class="activity-card">
+
+                    <h2>Scan Configuration</h2>
+
+                    <div class="activity-item">
+                        Scan Mode
+                        <span>Advanced</span>
+                    </div>
+
+                    <div class="activity-item">
+                        GPU Acceleration
+                        <span>Enabled</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Output Format
+                        <span>PDF Report</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="
+                margin-top:25px;
+                display:flex;
+                gap:15px;
+                flex-wrap:wrap;
+            ">
+
+                <button class="scan-btn" id="startScan">
+                    Start AI Scan
+                </button>
+
+                <button class="notification-btn" id="resetBtn" onclick="window.location.reload();">
+                    Reset
+                </button>
+
+            </div>
+
+            <div class="reports-table" style="margin-top:30px;">
+
+                <h2>
+                    Scan Result
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Authenticity Score</td>
+                            <td id="scoreCell">Waiting...</td>
+                        </tr>
+
+                        <tr>
+                            <td>Threat Level</td>
+                            <td id="threatCell">Waiting...</td>
+                        </tr>
+
+                        <tr>
+                            <td>Status</td>
+                            <td id="statusCell">Waiting...</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script>
+        const chooseBtn = document.getElementById("chooseBtn");
+        const fileInput = document.getElementById("fileInput");
+        const previewContainer = document.getElementById("previewContainer");
+
+        chooseBtn.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener("change", () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+
+            const url = URL.createObjectURL(file);
+
+            if (file.type.startsWith("image")) {
+                previewContainer.innerHTML = `
+                <img src="${url}" style="max-width:100%; max-height:400px; border-radius:15px;">
+                `;
+            } else if (file.type.startsWith("video")) {
+                previewContainer.innerHTML = `
+                <video controls style="max-width:100%; max-height:400px; border-radius:15px;">
+                    <source src="${url}">
+                </video>
+                `;
+            }
+        });
+
+        document.getElementById("startScan").addEventListener("click", () => {
+            document.getElementById("scoreCell").textContent = "94%";
+            document.getElementById("threatCell").textContent = "Low";
+            document.getElementById("statusCell").textContent = "Authentic Media";
+        });
+    </script>
+
+</body>
+
+</html>

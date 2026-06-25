@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepShield AI | Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>DeepShield AI</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="new-scan.html">
+                        <i class="fa-solid fa-upload"></i>
+                        New Scan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+
+                <div>
+
+                    <h1>Cyber Intelligence Dashboard</h1>
+
+                    <p>
+                        Welcome back. Monitor AI detection activity.
+                    </p>
+
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button class="notification-btn">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+
+                    <button class="scan-btn" onclick="window.location.href='new-scan.html'">
+                        Start New Scan
+                    </button>
+
+                </div>
+
+            </div>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h3>12,540</h3>
+
+                    <p>Total Scans</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-shield"></i>
+
+                    <h3>1,420</h3>
+
+                    <p>Deepfakes Detected</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3>11,120</h3>
+
+                    <p>Authentic Media</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <h3>98.7%</h3>
+
+                    <p>Detection Accuracy</p>
+
+                </div>
+
+            </section>
+
+            <section class="analytics-grid">
+
+                <div class="chart-card">
+
+                    <div class="card-header">
+
+                        <h2>Detection Analytics</h2>
+
+                    </div>
+
+                    <canvas id="scanChart"></canvas>
+
+                </div>
+
+                <div class="threat-card">
+
+                    <h2>Threat Level</h2>
+
+                    <div class="threat-circle">
+                        HIGH
+                    </div>
+
+                    <p>
+                        Elevated deepfake detection activity detected.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="content-grid">
+
+                <div class="activity-card">
+
+                    <h2>Recent Activity</h2>
+
+                    <div class="activity-item">
+                        Image Scan Completed
+                        <span>2 min ago</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Report Generated
+                        <span>15 min ago</span>
+                    </div>
+
+                    <div class="activity-item">
+                        New Upload Processed
+                        <span>32 min ago</span>
+                    </div>
+
+                    <div class="activity-item">
+                        Metadata Analysis
+                        <span>1 hour ago</span>
+                    </div>
+
+                </div>
+
+                <div class="upload-card">
+
+                    <h2>Quick Scan</h2>
+
+                    <div class="upload-zone">
+
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        <p>
+                            Drag & Drop Image or Video
+                        </p>
+
+                        <button onclick="window.location.href='new-scan.html'">
+                            Select File
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="reports-table">
+
+                <div class="table-header">
+
+                    <h2>Recent Reports</h2>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>File Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Score</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>video_01.mp4</td>
+                            <td>Video</td>
+                            <td class="danger">
+                                Fake
+                            </td>
+                            <td>91%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>image_15.jpg</td>
+                            <td>Image</td>
+                            <td class="safe">
+                                Authentic
+                            </td>
+                            <td>96%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>media_22.png</td>
+                            <td>Image</td>
+                            <td class="warning">
+                                Suspicious
+                            </td>
+                            <td>68%</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

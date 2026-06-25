@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepShield AI | Login</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+
+        <div class="auth-card">
+
+            <div class="auth-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>DeepShield AI</h2>
+
+            </div>
+
+            <p class="auth-subtitle">
+                Secure Login to Cyber Intelligence Platform
+            </p>
+
+            <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div class="auth-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="register.html">Register</a> | 
+                <a href="dashboard.html">Dashboard</a> | 
+                <a href="history.html">History</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
